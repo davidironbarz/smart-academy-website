@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-weight: 600;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-700 hover:bg-primary-800 text-white font-semibold py-3 px-8 rounded-md transition-all duration-200 shadow-md hover:shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply bg-cream-100 hover:bg-cream-200 text-primary-800 font-semibold py-3 px-8 rounded-md border-2 border-primary-600 transition-all duration-200 shadow-sm hover:shadow-md;
+  }
+  
+  .btn-outline {
+    @apply bg-transparent hover:bg-primary-700 text-primary-700 hover:text-white font-semibold py-3 px-8 rounded-md border-2 border-primary-700 transition-all duration-200;
+  }
+  
+  .section-padding {
+    @apply py-20 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100;
+  }
+  
+  .card-elevated {
+    @apply bg-white rounded-xl shadow-xl border border-gray-200;
+  }
+  
+  .text-primary {
+    @apply text-primary-800;
+  }
+  
+  .text-secondary {
+    @apply text-accent-700;
+  }
+  
+  .bg-section {
+    @apply bg-cream-50;
+  }
+  
+  .bg-accent {
+    @apply bg-primary-50;
+  }
+}
