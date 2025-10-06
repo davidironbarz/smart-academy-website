@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Academy - Preview</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23b5a68f' rx='4'/><text x='16' y='22' font-family='Arial, sans-serif' font-size='16' font-weight='bold' text-anchor='middle' fill='white'>SA</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#faf9f7',
+                            100: '#f5f3f0',
+                            200: '#e8e4dd',
+                            300: '#d9d2c5',
+                            400: '#c7bdaa',
+                            500: '#b5a68f',
+                            600: '#a08f73',
+                            700: '#8a7a5f',
+                            800: '#6d5f4c',
+                            900: '#504439',
+                        },
+                        cream: {
+                            50: '#fefdfb',
+                            100: '#fdfbf7',
+                            200: '#faf6ed',
+                            300: '#f6f0e2',
+                            400: '#f1e9d5',
+                            500: '#ebe1c7',
+                            600: '#e4d8b8',
+                            700: '#dccfa7',
+                            800: '#d3c595',
+                            900: '#c9b982',
+                        },
+                        accent: {
+                            50: '#f7f6f4',
+                            100: '#eeede8',
+                            200: '#ddd9d0',
+                            300: '#c9c2b4',
+                            400: '#b3a894',
+                            500: '#9d8e72',
+                            600: '#8a7a5f',
+                            700: '#73654e',
+                            800: '#5c513e',
+                            900: '#453d2f',
+                        },
+                    },
+                    fontFamily: {
+                        'serif': ['Georgia', 'Times New Roman', 'serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .btn-primary {
+            @apply bg-primary-700 hover:bg-primary-800 text-white font-semibold py-3 px-8 rounded-md transition-all duration-200 shadow-md hover:shadow-lg;
+        }
+        .btn-outline {
+            @apply bg-transparent hover:bg-primary-700 text-primary-700 hover:text-white font-semibold py-3 px-8 rounded-md border-2 border-primary-700 transition-all duration-200;
+        }
+        .card-elevated {
+            @apply bg-white rounded-xl shadow-xl border border-gray-200;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-cream-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md border-b border-primary-200">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-6">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-primary-700 rounded-lg flex items-center justify-center shadow-md">
+                        <span class="text-white font-bold text-lg">SA</span>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-primary-800">Smart Academy</h1>
+                        <p class="text-sm text-accent-600 font-medium">Monrovia, Liberia</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-primary-700 hover:text-primary-800 font-medium transition-colors duration-200 relative group">
+                        Home
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-700 transition-all duration-200 group-hover:w-full"></span>
+                    </a>
+                    <a href="#" class="text-primary-700 hover:text-primary-800 font-medium transition-colors duration-200 relative group">
+                        About
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-700 transition-all duration-200 group-hover:w-full"></span>
+                    </a>
+                    <a href="#" class="text-primary-700 hover:text-primary-800 font-medium transition-colors duration-200 relative group">
+                        Academics
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-700 transition-all duration-200 group-hover:w-full"></span>
+                    </a>
+                    <a href="#" class="text-primary-700 hover:text-primary-800 font-medium transition-colors duration-200 relative group">
+                        Admissions
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-700 transition-all duration-200 group-hover:w-full"></span>
+                    </a>
+                    <a href="#" class="text-primary-700 hover:text-primary-800 font-medium transition-colors duration-200 relative group">
+                        Student Life
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-700 transition-all duration-200 group-hover:w-full"></span>
+                    </a>
+                    <a href="#" class="text-primary-700 hover:text-primary-800 font-medium transition-colors duration-200 relative group">
+                        Contact
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-700 transition-all duration-200 group-hover:w-full"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-primary-700 to-primary-800 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
+                Nurturing Young Minds for a 
+                <span class="text-cream-200">Brighter Future</span>
+            </h1>
+            <p class="text-xl text-cream-100 max-w-3xl mx-auto mb-8 leading-relaxed">
+                Smart Academy provides quality education for students in Monrovia, Liberia. Founded in 2013, we serve 376 students 
+                with excellence in education and character development.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="btn-primary">Apply Now</button>
+                <button class="btn-outline">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-800 mb-6">About Smart Academy</h2>
+                <p class="text-xl text-accent-700 max-w-3xl mx-auto leading-relaxed">
+                    Founded in 2013 with a vision to provide quality education in Monrovia, Smart Academy has been nurturing young minds 
+                    and building character for over a decade, serving 376 students with excellence.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card-elevated p-8 text-center">
+                    <div class="w-20 h-20 bg-primary-700 rounded-lg flex items-center justify-center mx-auto mb-6 shadow-md">
+                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-primary-800">Our Mission</h3>
+                    <p class="text-accent-700 leading-relaxed">To provide quality education that develops critical thinking, creativity, and character in every student, serving 376 students with excellence since 2013.</p>
+                </div>
+                
+                <div class="card-elevated p-8 text-center">
+                    <div class="w-20 h-20 bg-primary-700 rounded-lg flex items-center justify-center mx-auto mb-6 shadow-md">
+                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-primary-800">Our Vision</h3>
+                    <p class="text-accent-700 leading-relaxed">To be the leading educational institution in Monrovia, producing well-rounded future leaders.</p>
+                </div>
+                
+                <div class="card-elevated p-8 text-center">
+                    <div class="w-20 h-20 bg-primary-700 rounded-lg flex items-center justify-center mx-auto mb-6 shadow-md">
+                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-primary-800">Our Values</h3>
+                    <p class="text-accent-700 leading-relaxed">Excellence, Integrity, Respect, and Service to community guide everything we do.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="py-20 bg-cream-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-800 mb-6">Our Academic Programs</h2>
+                <p class="text-xl text-accent-700 max-w-3xl mx-auto leading-relaxed">
+                    We offer comprehensive educational programs designed to meet the developmental needs of each age group.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card-elevated p-8 text-center hover:shadow-2xl transition-all duration-300">
+                    <div class="w-20 h-20 bg-cream-200 rounded-lg flex items-center justify-center mx-auto mb-6 shadow-md">
+                        <svg class="w-10 h-10 text-primary-800" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-4 text-primary-800">Nursery School</h3>
+                    <p class="text-accent-700 text-center mb-6 leading-relaxed">Ages 2-4. Early childhood development through play-based learning.</p>
+                    <ul class="space-y-2 text-sm text-accent-600 text-left">
+                        <li class="flex items-center"><span class="w-2 h-2 bg-primary-600 rounded-full mr-3"></span>Sensory play activities</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-primary-600 rounded-full mr-3"></span>Basic motor skills development</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-primary-600 rounded-full mr-3"></span>Social interaction and sharing</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-primary-600 rounded-full mr-3"></span>Early literacy introduction</li>
+                    </ul>
+                </div>
+                
+                <div class="card-elevated p-8 text-center hover:shadow-2xl transition-all duration-300">
+                    <div class="w-20 h-20 bg-cream-200 rounded-lg flex items-center justify-center mx-auto mb-6 shadow-md">
+                        <svg class="w-10 h-10 text-primary-800" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-4 text-primary-800">Kindergarten</h3>
+                    <p class="text-accent-700 text-center mb-6 leading-relaxed">Ages 4-6. Foundation building for academic success.</p>
+                    <ul class="space-y-2 text-sm text-accent-600 text-left">
+                        <li class="flex items-center"><span class="w-2 h-2 bg-primary-600 rounded-full mr-3"></span>Pre-reading and pre-writing skills</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-primary-600 rounded-full mr-3"></span>Basic mathematics concepts</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-primary-600 rounded-full mr-3"></span>Science exploration</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-primary-600 rounded-full mr-3"></span>Creative arts and crafts</li>
+                    </ul>
+                </div>
+                
+                <div class="card-elevated p-8 text-center hover:shadow-2xl transition-all duration-300">
+                    <div class="w-20 h-20 bg-cream-200 rounded-lg flex items-center justify-center mx-auto mb-6 shadow-md">
+                        <svg class="w-10 h-10 text-primary-800" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-4 text-primary-800">Primary School</h3>
+                    <p class="text-accent-700 text-center mb-6 leading-relaxed">Ages 6-12. Comprehensive academic program.</p>
+                    <ul class="space-y-2 text-sm text-accent-600 text-left">
+                        <li class="flex items-center"><span class="w-2 h-2 bg-primary-600 rounded-full mr-3"></span>Core subjects (Math, English, Science)</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-primary-600 rounded-full mr-3"></span>Social studies and history</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-primary-600 rounded-full mr-3"></span>Physical education</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-primary-600 rounded-full mr-3"></span>Computer literacy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-primary-700 text-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Join Our Family?</h2>
+            <p class="text-xl text-cream-100 max-w-3xl mx-auto mb-8 leading-relaxed">
+                Contact us today to learn more about enrollment and schedule a school tour.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-cream-200 rounded-lg flex items-center justify-center mx-auto mb-6 shadow-md">
+                        <svg class="w-8 h-8 text-primary-800" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-cream-100">Visit Us</h3>
+                    <p class="text-cream-200 leading-relaxed">Samuel Kanyon Doe Boulevard<br />Monrovia, Liberia</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-cream-200 rounded-lg flex items-center justify-center mx-auto mb-6 shadow-md">
+                        <svg class="w-8 h-8 text-primary-800" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-cream-100">Call Us</h3>
+                    <p class="text-cream-200 leading-relaxed">+231 886 515 260<br />+231880655905<br />+231 770 287 145, +231 775 506 222</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-cream-200 rounded-lg flex items-center justify-center mx-auto mb-6 shadow-md">
+                        <svg class="w-8 h-8 text-primary-800" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-cream-100">Email Us</h3>
+                    <p class="text-cream-200 leading-relaxed">smartkidsschool@gmail.com<br />Principal: +231 886 515 260<br />Website: smarteduacademy.edu.lr</p>
+                </div>
+            </div>
+            
+            <button class="btn-outline">
+                Get in Touch
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-800 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-cream-100 rounded-lg flex items-center justify-center shadow-md">
+                            <span class="text-primary-800 font-bold text-lg">SA</span>
+                        </div>
+                        <div>
+                        <h3 class="text-xl font-bold text-cream-100">Smart Academy</h3>
+                        <p class="text-sm text-cream-200">Monrovia, Liberia</p>
+                        </div>
+                    </div>
+                    <p class="text-cream-200 text-sm leading-relaxed">
+                        Nurturing young minds for a brighter future through quality education and character development.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-cream-100">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-cream-200 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-cream-200 hover:text-white transition-colors">Academics</a></li>
+                        <li><a href="#" class="text-cream-200 hover:text-white transition-colors">Admissions</a></li>
+                        <li><a href="#" class="text-cream-200 hover:text-white transition-colors">Student Life</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-cream-100">Programs</h4>
+                    <ul class="space-y-2">
+                        <li><span class="text-cream-200">Nursery School</span></li>
+                        <li><span class="text-cream-200">Kindergarten</span></li>
+                        <li><span class="text-cream-200">Primary School</span></li>
+                        <li><span class="text-cream-200">After School Programs</span></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-cream-100">Contact Info</h4>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-start space-x-2">
+                            <div class="w-4 h-4 mt-0.5 flex-shrink-0">
+                                <svg class="w-4 h-4 text-cream-300" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                                </svg>
+                            </div>
+                            <p class="text-cream-200">
+                                Samuel Kanyon Doe Boulevard<br />
+                                Monrovia, Liberia
+                            </p>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-4 h-4 flex-shrink-0">
+                                <svg class="w-4 h-4 text-cream-300" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                                </svg>
+                            </div>
+                            <p class="text-cream-200">+231 886 515 260</p>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-4 h-4 flex-shrink-0">
+                                <svg class="w-4 h-4 text-cream-300" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                                </svg>
+                            </div>
+                            <p class="text-cream-200">smartkidsschool@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-primary-700 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <p class="text-cream-200 text-sm">
+                        © 2024 Smart Academy. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-cream-200 hover:text-white transition-colors text-sm">Privacy Policy</a>
+                        <a href="#" class="text-cream-200 hover:text-white transition-colors text-sm">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
